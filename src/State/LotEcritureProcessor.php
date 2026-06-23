@@ -6,12 +6,17 @@ use ApiPlatform\Metadata\Operation;
 use ApiPlatform\State\ProcessorInterface;
 use App\Dto\LigneDTO;
 use App\Dto\PieceDTO;
+use App\Message\PersistLegacyEcriture;
+use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\ObjectMapper\ObjectMapperInterface;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class LotEcritureProcessor implements ProcessorInterface
 {
     public function __construct(
-        private ObjectMapperInterface $objectMapper
+        private ObjectMapperInterface $objectMapper,
+        // private HttpClientInterface $ecrituresClient,
+        private MessageBusInterface $messageBus,
     ) {
     }
 
@@ -35,6 +40,6 @@ class LotEcritureProcessor implements ProcessorInterface
             $pieceDTO->addLigne($ligneDTO);
         }
 
-        dump($pieceDTO);
+        $this->messageBus->dispatch(new PersistLegacyEcriture($pieceDTO));
     }
 }

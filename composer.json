@@ -15,9 +15,12 @@
         "phpdocumentor/reflection-docblock": "^6.0",
         "phpstan/phpdoc-parser": "^2.3",
         "symfony/console": "8.1.*",
+        "symfony/doctrine-messenger": "8.1.*",
         "symfony/dotenv": "8.1.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "8.1.*",
+        "symfony/http-client": "8.1.*",
+        "symfony/messenger": "8.1.*",
         "symfony/monolog-bundle": "^3.0|^4.0",
         "symfony/object-mapper": "8.1.*",
         "symfony/runtime": "8.1.*",
@@ -82,10 +85,7 @@
     "require-dev": {
         "symfony/debug-bundle": "8.1.*",
         "symfony/maker-bundle": "^1.67",
-<<<<<<< HEAD
-=======
         "symfony/monolog-bundle": "^3.0|^4.0",
->>>>>>> 0362013 (process lotEcritures)
         "symfony/stopwatch": "8.1.*",
         "symfony/web-profiler-bundle": "8.1.*"
     }

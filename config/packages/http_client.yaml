@@ -1,0 +1,8 @@
+framework:
+    http_client:
+        scoped_clients:
+          ecritures.client:
+            base_uri: 'https://www.macompta-dev.fr'
+            headers:
+                Accept: 'application/json'
+            timeout: 30
