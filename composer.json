@@ -82,6 +82,10 @@
     "require-dev": {
         "symfony/debug-bundle": "8.1.*",
         "symfony/maker-bundle": "^1.67",
+<<<<<<< HEAD
+=======
+        "symfony/monolog-bundle": "^3.0|^4.0",
+>>>>>>> 0362013 (process lotEcritures)
         "symfony/stopwatch": "8.1.*",
         "symfony/web-profiler-bundle": "8.1.*"
     }
