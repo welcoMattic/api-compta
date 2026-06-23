@@ -24,7 +24,17 @@ class LotEcritureInput
      */
     public function __construct(
         #[Groups([self::WRITE])]
-        public array $ecritures
+        public ?string $date = null,
+        #[Groups([self::WRITE])]
+        public ?string $journal = null,
+        #[Groups([self::WRITE])]
+        public ?string $moyenPaiement = null,
+        #[Groups([self::WRITE])]
+        public ?string $ref = null,
+        #[Groups([self::WRITE])]
+        public ?int $numero = null,
+        #[Groups([self::WRITE])]
+        public array $ecritures = [],
     ) {
     }
 }

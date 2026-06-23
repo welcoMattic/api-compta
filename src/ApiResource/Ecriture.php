@@ -9,9 +9,7 @@ class Ecriture
 {
     public function __construct(
         #[Groups([LotEcritureInput::WRITE])]
-        public int $numero,
-        #[Groups([LotEcritureInput::WRITE])]
-        public \DateTimeImmutable $date,
+        public string $codeCompte,
         #[Groups([LotEcritureInput::WRITE])]
         public string $libelle,
         #[Groups([LotEcritureInput::WRITE])]
